@@ -131,9 +131,19 @@ export default {
     left: 30%;
     z-index: 999;
 
+     @media(max-width: 992px) {
+         left: auto;
+      }
+
     .alert {
       padding: 1rem 1rem 0;
       filter: drop-shadow(1px 1px 2px #000);
+      min-width: 565px;
+      text-align: center;
+
+      @media(max-width: 992px) {
+        min-width: 70%;
+      }
     }
   }
 }
