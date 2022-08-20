@@ -2,13 +2,16 @@
   <div class="customer text-center">
     <div>
       <b-card
-        :title="`${customer.first_name} ${customer.last_name}`"
-        :sub-title="customer.email"
+        :title="customer.name ? customer.name : `${customer.first_name} ${customer.last_name}`"
+        :sub-title="customer.job ? `${customer.job}` : 'Customer'"
         :img-src="customer.avatar"
         img-alt="Image"
         img-top
         class="mb-4"
       >
+        <b-card-text>
+          {{ customer.email }}
+        </b-card-text>
         <div>
           <div class="holdBtns">
             <b-button
@@ -134,7 +137,7 @@ export default {
 .customer {
   .card {
     align-items: center;
-    padding: 1.5rem 0 1rem;
+    padding: 1rem 0;
     img {
       width: 120px;
       height: 120px;

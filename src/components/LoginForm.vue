@@ -2,7 +2,7 @@
   <div class="login">
     <b-container>
       <b-row v-if="isUser">
-        <b-col class="login__error" col="12">Invalid user</b-col>
+        <b-col class="login__error" col="12">Invalid Credentials</b-col>
       </b-row>
     <b-row align-h="around">
       <b-col md="12" lg="4">
