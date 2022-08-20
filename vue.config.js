@@ -3,6 +3,6 @@ module.exports = defineConfig({
   transpileDependencies: true
 })
 
-module.exports ={
+module.exports = {
   publicPath: '/customer-crud/'
 }
