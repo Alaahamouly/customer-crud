@@ -5,7 +5,7 @@
         :title="customer.name ? customer.name : `${customer.first_name} ${customer.last_name}`"
         :sub-title="customer.job ? `${customer.job}` : 'Customer'"
         :img-src="customer.avatar"
-        img-alt="Image"
+        :img-alt="customer.first_name"
         img-top
         class="mb-4"
       >

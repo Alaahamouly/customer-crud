@@ -90,7 +90,7 @@ export default {
         this.perPage = response.data.per_page
       } else {
         this.loading = false
-        this.customers = response.data.data
+        this.customers = []
       }
     },
     async updateCustomer (updatedInfo) {
@@ -106,7 +106,7 @@ export default {
         this.showAlert()
         const customer = response.data
         const foundIndex = this.customers.findIndex(
-          (x) => x.id === updatedInfo.customerID
+          (customerItem) => customerItem.id === updatedInfo.customerID
         )
         if (foundIndex !== -1) {
           const existingCust = this.customers[foundIndex]
@@ -120,8 +120,8 @@ export default {
         this.deleteNotification = true
         this.showAlert()
 
-        const index = this.customers.findIndex((c) => {
-          return c.id === customerID
+        const index = this.customers.findIndex((customerItem) => {
+          return customerItem.id === customerID
         })
         if (index !== -1) this.customers.splice(index, 1)
       }
